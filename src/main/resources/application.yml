@@ -1,0 +1,7 @@
+spring:
+
+  application:
+    name: splitr-db-migrator
+
+postgres:
+  repave: ${REPAVE_DB:false}

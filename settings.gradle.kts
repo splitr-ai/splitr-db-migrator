@@ -1,1 +1,1 @@
-rootProject.name = "splitgenie-db-migrator"
+rootProject.name = "splitr-db-migrator"

@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/splitr-db
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+  liquibase:
+    enabled: true
+    change-log: classpath:db/schema/changelog.yml
+    default-schema: public
+    label-filter: DDL,DML
+
+
+

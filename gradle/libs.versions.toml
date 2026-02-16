@@ -1,0 +1,43 @@
+# Gradle Version Catalog for Splitr Database Migrator
+#
+# Note: We omit versions for libraries that are managed by the Spring Boot BOM
+# via the Spring Boot Gradle plugin and io.spring.dependency-management.
+# For any new third-party library not managed by Boot, please add a version here.
+
+[versions]
+lombok = "1.18.42"
+aws-sdk = "2.41.19"
+aws-advanced-jdbc-wrapper = "3.1.0"
+postgresqlVersion = "42.7.9"
+spring-cloud = "3.4.0"
+
+[libraries]
+# Spring Boot starters (versions managed by Spring Boot BOM)
+spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+spring-boot-starter-data-jpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa" }
+spring-boot-starter-liquibase = { group = "org.springframework.boot", name = "spring-boot-starter-liquibase" }
+spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test" }
+spring-boot-starter-liquibase-test = { group = "org.springframework.boot", name = "spring-boot-starter-liquibase-test" }
+
+# Dev tools (managed by Boot BOM)
+spring-boot-devtools = { group = "org.springframework.boot", name = "spring-boot-devtools" }
+
+# Database and migration (managed by Boot BOM)
+liquibase-core = { group = "org.liquibase", name = "liquibase-core" }
+postgresql = { group = "org.postgresql", name = "postgresql", version.ref= "postgresqlVersion" }
+
+# Lombok (not managed by Boot BOM)
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
+
+# AWS SDK v2 (not managed by Boot BOM)
+aws-sdk-rds = { group = "software.amazon.awssdk", name = "rds", version.ref = "aws-sdk" }
+
+# AWS Advanced JDBC Wrapper (not managed by Boot BOM)
+aws-advanced-jdbc-wrapper = { group = "software.amazon.jdbc", name = "aws-advanced-jdbc-wrapper", version.ref = "aws-advanced-jdbc-wrapper" }
+
+# Testing platform (managed by JUnit BOM pulled by Boot in tests)
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher" }
+
+[plugins]
+# If you want to manage plugin versions here in the future, you can define them, e.g.:
+# spring-boot = { id = "org.springframework.boot", version = "3.5.4" }

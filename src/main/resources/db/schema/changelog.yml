@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V1__init_schema.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 2
+      author: ajay
+      labels: DML
+      changes:
+        - sqlFile:
+            path: dml/V2_add_default_categories.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 3
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V3__add_created_at_group_member_table.sql
+            relativeToChangelogFile: true
+
+
