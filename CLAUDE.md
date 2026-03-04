@@ -1,8 +1,8 @@
-# SplitGenie DB Migrator
+# Splitr DB Migrator
 
 ## What This Repo Is
 
-This is a **Liquibase-based database migration project** for the SplitGenie (Splitr) expense-splitting app. The backend service lives in a separate repo — this repo contains **only database migrations**. Do not create application code, services, controllers, or any non-migration code here.
+This is a **Liquibase-based database migration project** for the Splitr expense-splitting app. The backend service lives in a separate repo — this repo contains **only database migrations**. Do not create application code, services, controllers, or any non-migration code here.
 
 ## Tech Stack
 
