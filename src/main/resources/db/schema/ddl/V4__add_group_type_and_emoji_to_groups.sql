@@ -1,0 +1,2 @@
+ALTER TABLE groups ADD COLUMN group_type VARCHAR(20);
+ALTER TABLE groups ADD COLUMN emoji VARCHAR(10);

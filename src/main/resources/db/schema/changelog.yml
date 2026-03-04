@@ -23,5 +23,13 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V3__add_created_at_group_member_table.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 4
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V4__add_group_type_and_emoji_to_groups.sql
+            relativeToChangelogFile: true
 
 
