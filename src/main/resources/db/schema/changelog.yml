@@ -31,5 +31,13 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V4__add_group_type_and_emoji_to_groups.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 5
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V5__rename_cognito_sub_to_clerk_id.sql
+            relativeToChangelogFile: true
 
 
