@@ -88,5 +88,13 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V11__create_shedlock_table.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 12
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V12__create_scan_usage_table.sql
+            relativeToChangelogFile: true
 
 
