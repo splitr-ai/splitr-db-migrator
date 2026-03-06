@@ -64,5 +64,29 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V8__add_version_to_categories_and_exchange_rates.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 9
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V9__create_push_tokens_table.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 10
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V10__create_notification_log_table.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 11
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V11__create_shedlock_table.sql
+            relativeToChangelogFile: true
 
 
