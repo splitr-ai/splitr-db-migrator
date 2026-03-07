@@ -104,5 +104,13 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V13__create_chat_usage_table.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 14
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V14__create_settlement_nudges_table.sql
+            relativeToChangelogFile: true
 
 
