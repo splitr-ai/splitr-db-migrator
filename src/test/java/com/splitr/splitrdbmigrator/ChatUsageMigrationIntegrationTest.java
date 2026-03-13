@@ -38,4 +38,25 @@ class ChatUsageMigrationIntegrationTest {
         );
         assertThat(count).isEqualTo(1);
     }
+
+    @Test
+    void testChatUsageColumnsExist() {
+        Integer promptTokensCount = jdbcTemplate.queryForObject(
+                "SELECT count(*) FROM information_schema.columns WHERE table_name = 'chat_usage' AND column_name = 'prompt_tokens'",
+                Integer.class
+        );
+        assertThat(promptTokensCount).isEqualTo(1);
+
+        Integer completionTokensCount = jdbcTemplate.queryForObject(
+                "SELECT count(*) FROM information_schema.columns WHERE table_name = 'chat_usage' AND column_name = 'completion_tokens'",
+                Integer.class
+        );
+        assertThat(completionTokensCount).isEqualTo(1);
+
+        Integer modelNameCount = jdbcTemplate.queryForObject(
+                "SELECT count(*) FROM information_schema.columns WHERE table_name = 'chat_usage' AND column_name = 'model_name'",
+                Integer.class
+        );
+        assertThat(modelNameCount).isEqualTo(1);
+    }
 }

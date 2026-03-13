@@ -112,5 +112,21 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V14__create_settlement_nudges_table.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 15
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V15__add_tokens_to_chat_usage.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 16
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V16__add_model_name_to_chat_usage.sql
+            relativeToChangelogFile: true
 
 
