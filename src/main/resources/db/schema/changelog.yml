@@ -185,5 +185,21 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V23__add_unique_index_guest_users_email.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 24
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V24__set_default_simplify_debts.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 25
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V25__update_activity_log_check_constraint.sql
+            relativeToChangelogFile: true
 
 
