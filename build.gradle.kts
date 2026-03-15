@@ -91,6 +91,15 @@ registerMigrationTask(
     dbName = "splitr-db"
 )
 
+registerMigrationTask(
+    "cleanDb",
+    repave = false,
+    dataSourceProfile = "local-postgres-clean",
+    desc = "Cleans the database schema and data by dropping all objects and re-running migrations",
+    liquibaseLabels = "DDL,DML",
+    dbName = "splitr-db"
+)
+
 // Make repaveDb task finalize with migrate task so migrate runs after repaveDb
 tasks.getByName("repaveDb").finalizedBy(tasks.getByName("migrate"))
 

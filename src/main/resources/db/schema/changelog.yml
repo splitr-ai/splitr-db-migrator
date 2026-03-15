@@ -128,5 +128,62 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V16__add_model_name_to_chat_usage.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 17
+      author: ajay
+      labels: DDL
+      validCheckSum: ANY
+      changes:
+        - sqlFile:
+            path: ddl/V17__add_missing_fk_indexes.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 18
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V18__add_composite_and_partial_indexes.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 19
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V19__convert_to_timestamptz.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 20
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V20__convert_to_jsonb.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 21
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V21__add_check_constraints.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 22
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V22__create_expense_comments_table.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 23
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V23__add_unique_index_guest_users_email.sql
+            relativeToChangelogFile: true
 
 

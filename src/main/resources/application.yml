@@ -1,5 +1,7 @@
 spring:
 
+  liquibase:
+    drop-first: false
   application:
     name: splitr-db-migrator
 

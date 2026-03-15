@@ -13,10 +13,12 @@ Specific Gradle tasks are registered in `build.gradle.kts` for common operations
 - `./gradlew migrate`: Runs migrations (DDL & DML) against the local Postgres database (`splitr-db`).
 - `./gradlew updateDb`: Alias for `migrate`, runs Liquibase updates without repaving.
 - `./gradlew repaveDb`: **Destructive operation**. Drops the existing `splitr-db` database and recreates it from scratch before running migrations.
+- `./gradlew cleanDb`: **Destructive operation**. Drops all existing tables and objects in the database and re-runs all migrations (useful for clearing data while keeping the database). This task is isolated and will never run as part of `updateDb`.
 
 ##### Spring Profiles
 - `local-postgres`: Standard local development profile.
 - `local-postgres-repave`: Used specifically for the repave operation.
+- `local-postgres-clean`: Used to drop all database objects and re-run migrations.
 
 #### 2. Liquibase Migrations
 
@@ -66,8 +68,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ActiveProfiles("local-postgres")
 class MigrationIntegrationTest {
 
-    @Autowired
     private JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    public void setDataSource(javax.sql.DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+    }
 
     @Test
     void testNewTableExists() {

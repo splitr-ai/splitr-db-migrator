@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
 import javax.sql.DataSource;
 
 @Configuration
-@Profile(value = {"local-postgres", "local-postgres-repave"})
+@Profile(value = {"local-postgres", "local-postgres-repave", "local-postgres-clean"})
 public class LocalDataSourceConfiguration {
 
     @Bean

@@ -48,6 +48,7 @@ src/main/resources/
 - `./gradlew migrate` — Run migrations on local Postgres
 - `./gradlew updateDb` — Same as migrate (alias)
 - `./gradlew repaveDb` — Drop and recreate the database, then run migrate
+- `./gradlew cleanDb` — **Destructive operation**. Drops all database objects and re-runs all migrations (schema + data). Isolated from `updateDb`.
 
 ## Rules for Claude
 

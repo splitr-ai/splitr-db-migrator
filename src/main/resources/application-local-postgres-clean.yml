@@ -9,7 +9,4 @@ spring:
     change-log: classpath:db/schema/changelog.yml
     default-schema: public
     label-filter: DDL,DML
-    drop-first: false
-
-
-
+    drop-first: true
