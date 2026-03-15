@@ -201,5 +201,13 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V25__update_activity_log_check_constraint.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 26
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V26__update_activity_log_check_constraint_v2.sql
+            relativeToChangelogFile: true
 
 
