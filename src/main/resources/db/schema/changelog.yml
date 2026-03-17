@@ -209,5 +209,13 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V26__update_activity_log_check_constraint_v2.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 27
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V27__add_payment_handles_to_users.sql
+            relativeToChangelogFile: true
 
 
