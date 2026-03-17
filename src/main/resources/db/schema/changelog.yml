@@ -217,5 +217,13 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V27__add_payment_handles_to_users.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 28
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V28__add_image_keys.sql
+            relativeToChangelogFile: true
 
 
