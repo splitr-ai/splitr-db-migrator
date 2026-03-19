@@ -225,5 +225,11 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V28__add_image_keys.sql
             relativeToChangelogFile: true
-
-
+  - changeSet:
+      id: 29
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V29__create_idempotency_keys_table.sql
+            relativeToChangelogFile: true

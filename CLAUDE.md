@@ -50,6 +50,21 @@ src/main/resources/
 - `./gradlew repaveDb` — Drop and recreate the database, then run migrate
 - `./gradlew cleanDb` — **Destructive operation**. Drops all database objects and re-runs all migrations (schema + data). Isolated from `updateDb`.
 
+## Pipeline
+
+The **pipeline file** at `../pipeline/pipeline-db.md` (relative to this repo root) tracks pending DB migration tasks created by the BE team.
+
+- **At the start of every session**, check `../pipeline/pipeline-db.md` for items with status `pending`.
+- When you complete a pipeline item, update its status to `done` in `pipeline-db.md` and add the completion date in the Notes column.
+- Spec files referenced in the pipeline are at `../pipeline/db/`.
+
+## Architecture Decision Records (ADRs)
+
+ADRs live in `docs/adr/` within this repo. Use the format `ADR-{NNN}-{slug}.md`.
+
+- Create an ADR when a pipeline item or migration involves a non-trivial architectural decision (new table design, index strategy, constraint philosophy, etc.).
+- Reference the ADR from the migration SQL file header comment and from the pipeline notes.
+
 ## Rules for Claude
 
 - **Only create migration files** (SQL in `db/schema/ddl/` or `db/schema/dml/`) and update `changelog.yml`
