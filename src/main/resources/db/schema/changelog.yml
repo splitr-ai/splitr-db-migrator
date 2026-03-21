@@ -233,3 +233,19 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V29__create_idempotency_keys_table.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 30
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V30__add_last_digest_sent_at_to_users.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 31
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V31__add_profile_image_cleared_to_users.sql
+            relativeToChangelogFile: true
