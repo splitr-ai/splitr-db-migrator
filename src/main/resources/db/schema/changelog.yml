@@ -249,3 +249,43 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V31__add_profile_image_cleared_to_users.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 32
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V32__create_fx_snapshots_table.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 33
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V33__fix_exchange_rates_effective_date.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 34
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V34__add_fx_columns_to_expenses.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 35
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V35__add_fx_columns_to_settlements.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 36
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V36__create_recurring_expense_templates_table.sql
+            relativeToChangelogFile: true
