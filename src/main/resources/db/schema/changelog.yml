@@ -289,3 +289,11 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V36__create_recurring_expense_templates_table.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 37
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V37__create_finance_audit_log_table.sql
+            relativeToChangelogFile: true

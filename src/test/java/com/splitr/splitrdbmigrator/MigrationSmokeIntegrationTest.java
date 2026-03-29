@@ -58,7 +58,7 @@ class MigrationSmokeIntegrationTest {
 
         // This will naturally grow as new migrations are added.
         // If this test fails, it means the newest changeset didn't apply.
-        assertThat(maxId).isGreaterThanOrEqualTo(36);
+        assertThat(maxId).isGreaterThanOrEqualTo(37);
     }
 
     @Test
@@ -94,7 +94,8 @@ class MigrationSmokeIntegrationTest {
                 "settlement_nudges",
                 "idempotency_keys",
                 "fx_snapshots",
-                "recurring_expense_templates"
+                "recurring_expense_templates",
+                "finance_audit_log"
         );
 
         List<String> actualTables = jdbcTemplate.queryForList(
