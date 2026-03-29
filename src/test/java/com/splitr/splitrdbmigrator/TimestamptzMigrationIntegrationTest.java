@@ -49,7 +49,7 @@ class TimestamptzMigrationIntegrationTest {
                 new ColumnInfo("notification_log", "created_at"),
                 new ColumnInfo("notification_log", "delivered_at"),
                 new ColumnInfo("activity_log", "created_at"),
-                new ColumnInfo("exchange_rates", "effective_date"),
+                // effective_date was reverted to DATE by V33 — verified in ExchangeRatesEffectiveDateMigrationIntegrationTest
                 new ColumnInfo("exchange_rates", "fetched_at"),
                 new ColumnInfo("categories", "created_at")
         );
