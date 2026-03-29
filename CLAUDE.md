@@ -72,3 +72,6 @@ ADRs live in `docs/adr/` within this repo. Use the format `ADR-{NNN}-{slug}.md`.
 - Do not create new Java classes, Spring configurations, or application code
 - Follow the existing changeset pattern in `changelog.yml` when adding new migrations
 - Use the next sequential ID for new changesets
+- **NEVER run `repaveDb` or `cleanDb`** — these are destructive and wipe the local database
+- **NEVER run `migrate` or `updateDb`** — Ajay applies migrations to local and Railway Postgres manually
+- **Only run `./gradlew test`** to verify migrations — tests use Testcontainers (isolated Postgres), safe to run anytime
