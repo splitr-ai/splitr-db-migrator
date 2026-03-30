@@ -297,3 +297,11 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V37__create_finance_audit_log_table.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 38
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V38__create_ledger_entries_table.sql
+            relativeToChangelogFile: true
