@@ -305,3 +305,30 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V38__create_ledger_entries_table.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 39
+      author: ajay
+      labels: DDL
+      runInTransaction: false
+      changes:
+        - sqlFile:
+            path: ddl/V39__add_phone_index_to_users.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 40
+      author: ajay
+      labels: DDL
+      runInTransaction: false
+      changes:
+        - sqlFile:
+            path: ddl/V40__add_phone_index_to_guest_users.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 41
+      author: ajay
+      labels: DDL
+      runInTransaction: false
+      changes:
+        - sqlFile:
+            path: ddl/V41__add_unique_guest_constraint_to_group_members.sql
+            relativeToChangelogFile: true
