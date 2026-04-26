@@ -58,7 +58,7 @@ class MigrationSmokeIntegrationTest {
 
         // This will naturally grow as new migrations are added.
         // If this test fails, it means the newest changeset didn't apply.
-        assertThat(maxId).isGreaterThanOrEqualTo(41);
+        assertThat(maxId).isGreaterThanOrEqualTo(43);
     }
 
     @Test

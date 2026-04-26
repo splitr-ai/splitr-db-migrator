@@ -332,3 +332,20 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V41__add_unique_guest_constraint_to_group_members.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 42
+      author: ajay
+      labels: DDL
+      runInTransaction: false
+      changes:
+        - sqlFile:
+            path: ddl/V42__add_unique_user_constraint_to_group_members.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 43
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V43__add_push_token_id_to_notification_log.sql
+            relativeToChangelogFile: true
