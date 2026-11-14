@@ -349,3 +349,86 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V43__add_push_token_id_to_notification_log.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 44
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V44__add_read_at_to_notification_log.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 45
+      author: ajay
+      labels: DML
+      changes:
+        - sqlFile:
+            path: dml/V45_backfill_notification_log_read_at.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 46
+      author: ajay
+      labels: DDL
+      runInTransaction: false
+      changes:
+        - sqlFile:
+            path: ddl/V46__add_unread_index_to_notification_log.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 47
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V47__add_updated_by_to_expenses.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 48
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V48__validate_expenses_updated_by_fk.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 49
+      author: ajay
+      labels: DDL
+      runInTransaction: false
+      changes:
+        - sqlFile:
+            path: ddl/V49__add_updated_by_index_to_expenses.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 50
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V50__add_updated_by_to_settlements.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 51
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V51__validate_settlements_updated_by_fk.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 52
+      author: ajay
+      labels: DDL
+      runInTransaction: false
+      changes:
+        - sqlFile:
+            path: ddl/V52__add_updated_by_index_to_settlements.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 53
+      author: ajay
+      labels: DML
+      changes:
+        - sqlFile:
+            path: dml/V53_reactivate_user_bound_deleted_memberships.sql
+            relativeToChangelogFile: true
