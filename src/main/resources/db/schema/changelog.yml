@@ -432,3 +432,19 @@ databaseChangeLog:
         - sqlFile:
             path: dml/V53_reactivate_user_bound_deleted_memberships.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 54
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V54__allow_member_updated_activity_type.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 55
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V55__validate_activity_log_type_check.sql
+            relativeToChangelogFile: true

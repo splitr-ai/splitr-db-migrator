@@ -46,7 +46,8 @@ class ActivityLogCheckConstraintIntegrationTest {
             "group_deleted",
             "member_joined_via_invite",
             "invite_code_regenerated",
-            "expense_comment_added"
+            "expense_comment_added",
+            "member_updated"
         };
 
         for (String type : newTypes) {
