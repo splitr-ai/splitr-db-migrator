@@ -43,7 +43,7 @@ users, groups, group_members, expenses, expense_payers, expense_splits, settleme
 - **DML changes** go in `src/main/resources/db/schema/dml/` with label `DML`
 - File naming: `V{next_id}__{description}.sql` (double underscore for DDL, single for DML)
 - Every new migration must be registered in `changelog.yml` with the next sequential changeset `id`
-- **Next changeset ID: 56** (current highest is 55)
+- **Next changeset ID: 57** (current highest is 56)
 - Author field in changelog: `ajay`
 - All tables use soft-delete (`is_deleted BOOLEAN`), optimistic locking (`version INTEGER`), and timestamp tracking (`created_at`, `updated_at`)
 - Primary keys are `VARCHAR(60)` (UUID-based)
