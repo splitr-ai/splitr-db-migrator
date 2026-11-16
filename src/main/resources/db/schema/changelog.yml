@@ -448,3 +448,11 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V55__validate_activity_log_type_check.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 56
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V56__add_favorite_to_group_members.sql
+            relativeToChangelogFile: true
