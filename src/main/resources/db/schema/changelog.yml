@@ -456,3 +456,11 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V56__add_favorite_to_group_members.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 57
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V57__create_legal_acceptances_table.sql
+            relativeToChangelogFile: true

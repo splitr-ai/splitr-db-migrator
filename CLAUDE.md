@@ -35,7 +35,7 @@ src/test/java/                 # 24 integration test classes (including Migratio
 
 ## Database Tables (20 tables as of V36)
 
-users, groups, group_members, expenses, expense_payers, expense_splits, settlements, categories, exchange_rates, activity_log, user_balances, guest_users, push_tokens, notification_log, shedlock, scan_usage, settlement_nudges, idempotency_keys, fx_snapshots, recurring_expense_templates
+users, groups, group_members, expenses, expense_payers, expense_splits, settlements, categories, exchange_rates, activity_log, user_balances, guest_users, push_tokens, notification_log, shedlock, scan_usage, settlement_nudges, idempotency_keys, fx_snapshots, recurring_expense_templates, legal_acceptances
 
 ## Migration Conventions
 
@@ -43,7 +43,7 @@ users, groups, group_members, expenses, expense_payers, expense_splits, settleme
 - **DML changes** go in `src/main/resources/db/schema/dml/` with label `DML`
 - File naming: `V{next_id}__{description}.sql` (double underscore for DDL, single for DML)
 - Every new migration must be registered in `changelog.yml` with the next sequential changeset `id`
-- **Next changeset ID: 57** (current highest is 56)
+- **Next changeset ID: 58** (current highest is 57)
 - Author field in changelog: `ajay`
 - All tables use soft-delete (`is_deleted BOOLEAN`), optimistic locking (`version INTEGER`), and timestamp tracking (`created_at`, `updated_at`)
 - Primary keys are `VARCHAR(60)` (UUID-based)
