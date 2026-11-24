@@ -464,3 +464,28 @@ databaseChangeLog:
         - sqlFile:
             path: ddl/V57__create_legal_acceptances_table.sql
             relativeToChangelogFile: true
+  - changeSet:
+      id: 58
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V58__add_deletion_columns_to_users.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 59
+      author: ajay
+      labels: DDL
+      changes:
+        - sqlFile:
+            path: ddl/V59__validate_users_deletion_checks.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 60
+      author: ajay
+      labels: DDL
+      runInTransaction: false
+      changes:
+        - sqlFile:
+            path: ddl/V60__add_deletion_cleanup_index_to_users.sql
+            relativeToChangelogFile: true
