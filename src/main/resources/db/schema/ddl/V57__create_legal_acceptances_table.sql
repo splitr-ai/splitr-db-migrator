@@ -29,7 +29,7 @@ CREATE TABLE legal_acceptances (
     CONSTRAINT uq_legal_acceptances_user_doc_version UNIQUE (user_id, document_type, document_version)
 );
 
--- Latest acceptance per user and document (GET /v1/users/me).
+-- Latest acceptance per user and document (GET /v1/users/me/legal).
 CREATE INDEX idx_legal_acceptances_user_doc_time
     ON legal_acceptances (user_id, document_type, accepted_at DESC);
 
